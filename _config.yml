@@ -3,7 +3,8 @@ title: collaborative design
 email: oresmus@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
     a blog about collaborative design of complex things,
-    and other things I find interesting.
+    and other things I find interesting
+    (especially if they involve programming, math, or science).
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://oresmus.github.io" # the base hostname & protocol for your site
 ### twitter_username: jekyllrb
