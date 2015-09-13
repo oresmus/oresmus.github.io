@@ -6,14 +6,28 @@
 
 
 // Our variables
-$base-font-family: Helvetica, Arial, sans-serif;
+$base-font-family: 'Open Sans', sans-serif;
 $base-font-size:   16px;
 $small-font-size:  $base-font-size * 0.875;
 $base-line-height: 1.5;
 
+// bks split one old variable into these three:
+$base-plain-font-weight: 300;
+$base-bold-font-weight: 600;
+$base-hd-font-weight: 300;
+
+// variants for use in post text (all vars by bks)
+$post-font-family: Georgia,Utopia,Charter,'Times New Roman',Times,serif;
+$post-font-size:   16px;
+$post-line-height: 1.5;
+$post-plain-font-weight: 400;
+$post-bold-font-weight: 700;
+$post-hd-font-weight: 300;
+
+
 $spacing-unit:     30px;
 
-$text-color:       #111;
+$text-color:       #333;
 $background-color: #fdfdfd;
 $brand-color:      #2a7ae2;
 

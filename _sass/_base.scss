@@ -17,12 +17,28 @@ body {
     font-family: $base-font-family;
     font-size: $base-font-size;
     line-height: $base-line-height;
-    font-weight: 300;
+    font-weight: $base-plain-font-weight;
     color: $text-color;
     background-color: $background-color;
     -webkit-text-size-adjust: 100%;
+
+    .post { // bks hack. [we might want to change it to use a more specialized css classname.]
+        font-family: $post-font-family;
+        font-size: $post-font-size;
+        line-height: $post-line-height;
+        font-weight: $post-plain-font-weight;
+    }
 }
 
+
+/* bold weight [bks hack -- works in FF and Safari, at least for Open Sans from google web fonts] */
+b, strong {
+    font-weight: $base-bold-font-weight;
+    .post {
+        font-weight: $post-bold-font-weight;
+    }
+}
+/* [end bks hack] */
 
 
 /**
@@ -80,7 +96,10 @@ li {
  * Headings
  */
 h1, h2, h3, h4, h5, h6 {
-    font-weight: 300;
+    font-weight: $base-hd-font-weight;
+    .post {
+        font-weight: $post-hd-font-weight;
+    }
 }
 
 
@@ -173,7 +192,7 @@ pre {
 
 
 /**
- * Clearfix
+ * Clearfix [bks comment: for doc on this see 'http://blog.teamtreehouse.com/a-better-clearfix-with-sass']
  */
 %clearfix {
 
