@@ -18,7 +18,7 @@ $base-hd-font-weight: 300;
 
 // variants for use in post text (all vars by bks)
 $post-font-family: Georgia,Utopia,Charter,'Times New Roman',Times,serif;
-$post-font-size:   16px;
+$post-font-size:   16px;  // warning: doesn't affect hardcoded font sizes in _layout.scss
 $post-line-height: 1.5;
 $post-plain-font-weight: 400;
 $post-bold-font-weight: 700;
