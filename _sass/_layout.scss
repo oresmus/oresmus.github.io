@@ -220,10 +220,17 @@
 
     h3, h4 {
         font-size: 20px;
-        font-style: italic;
 
         @include media-query($on-laptop) {
             font-size: 18px;
         }
+    }
+
+    h3 {
+        font-style: italic;
+    }
+
+    h4 {
+        font-variant: small-caps;
     }
 }
