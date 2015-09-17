@@ -3,4 +3,4 @@ personal website with blog called [collaborative design](https://oresmus.github.
 
 see also the [collaborative design wiki](https://github.com/oresmus/collaborative-design-wiki/wiki)
 
-fyi, you can also find me at [google+](https://plus.google.com/+BruceSmith1))
+fyi, you can also find me at [google+](https://plus.google.com/+BruceSmith1)
