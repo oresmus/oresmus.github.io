@@ -4,14 +4,30 @@ title: About
 permalink: /about/
 ---
 
-<p>
-{{ site.description }}
-</p>
+<!-- the following is a *modified* version of {{ site.description }} (sorry) -->
+
+A blog and discussion community about **collaborative design of complex projects,**
+and other things I find interesting (especially if they involve programming, math, or science).
+
+You can make comments in several places (which have different login requirements):
+
+* at the end of each [blog post](/)
+* on the [Forum page]( /forum )
+* on the [collaborative design wiki](//github.com/oresmus/collaborative-design-wiki/wiki)
+* on the [Google+](https://plus.google.com/+BruceSmith1) post associated with each blog post (if there is one)
+
+The [wiki](//github.com/oresmus/collaborative-design-wiki/wiki)
+is the best place to add references (with short descriptions) to related projects or resources.
+
+For more general or longer discussions about related topics,
+the best place is either the wiki,
+or a post on your own blog or wiki,
+which you are welcome to link to from the wiki or forum.
 
 <div>
         <ul class="social-media-list">
 
-          <li> <p> by Bruce Smith </p> </li>
+          <li> <p> Blog author: Bruce Smith </p> </li>
 
           <!-- <li> <p> email: {{ site.email }} </p> </li> -->
           

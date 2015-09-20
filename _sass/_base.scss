@@ -102,6 +102,19 @@ h1, h2, h3, h4, h5, h6 {
     }
 }
 
+/**
+ * section header styles (but see also the uses of $top-text-color) [bks]
+ */
+
+.blog-header {
+    background-color: #0840ba;
+}
+.comments-header {
+    background-color: #fceab6;
+}
+.blog-footer {
+    background-color: #eee;
+}
 
 
 /**
