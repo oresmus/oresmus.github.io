@@ -19,7 +19,7 @@ You are welcome to start new discussions on any topic related to this blog.
     </div>
 
     <div>
-        <a class="muut" href="//muut.com/i/collaborative-design">Collaborative Design Forum</a>
+        <a class="muut" href="//muut.com/i/collaborative-design" data-show_title="false">Collaborative Design Forum</a>
         <script src="//cdn.muut.com/1/moot.min.js"></script>
         <noscript>(JavaScript required for forum)</noscript>
     </div>
