@@ -6,10 +6,10 @@ permalink: /about/
 
 <!-- the following is a *modified* version of {{ site.description }} (sorry) -->
 
-A blog and discussion community about **collaborative design of complex projects,**
+A blog about **collaborative design of complex projects,**
 and other things I find interesting (especially if they involve programming, math, or science).
 
-You can make comments in several places (which have different login requirements):
+You can make comments, or start related discussions, in several places (which have different login requirements):
 
 * at the end of each [blog post](/)
 * on the [Forum page]( /forum )
