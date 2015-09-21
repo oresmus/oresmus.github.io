@@ -4,6 +4,8 @@ title: Forum
 permalink: /forum/
 ---
 
+You are welcome to start new discussions on any topic related to this blog.
+
 <section id="forum">
 
     <div class="comments-header">
@@ -17,7 +19,7 @@ permalink: /forum/
     </div>
 
     <div>
-        <a class="muut" href="//muut.com/i/collaborative-design">Collaborative Design</a>
+        <a class="muut" href="//muut.com/i/collaborative-design">Collaborative Design Forum</a>
         <script src="//cdn.muut.com/1/moot.min.js"></script>
         <noscript>(JavaScript required for forum)</noscript>
     </div>
