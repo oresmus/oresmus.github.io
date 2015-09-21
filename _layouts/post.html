@@ -32,7 +32,7 @@ layout: default
 
         {% capture muutarticle %}{{ page.date | date: "%F" }}-{{ page.title | slugify }}{% endcapture %}
         
-        {% capture muutchannelurl %}//muut.com/i/{{muut-community}}/TEST-comments/{{muut-blog}}/{{muutarticle}}{% endcapture %}
+        {% capture muutchannelurl %}//muut.com/i/{{muut-community}}/comments/{{muut-blog}}/{{muutarticle}}{% endcapture %}
 
         <a class="muut" href="{{muutchannelurl}}" data-show_title="false">Comments</a>
         <script src="//cdn.muut.com/1/moot.min.js"></script>
