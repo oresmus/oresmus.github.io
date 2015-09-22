@@ -16,7 +16,7 @@ in an open-ended way.
 
 The goal is to increase the effectiveness of group discussions of all sizes,
 by helping participants keep things organized for themselves and each other,
-seeing how everything fits together,
+and see how everything fits together,
 as if they were "**seeing into a global brain**"
 that they can all contribute to.
 The hope (justified below) is that this could augment current large-group decision processes
