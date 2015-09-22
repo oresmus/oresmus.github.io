@@ -67,3 +67,6 @@ which you are welcome to link to from the wiki or forum.
         </ul>
 
 </div>
+
+(This site uses javascript for Muut comments and for Google Analytics.)
+
