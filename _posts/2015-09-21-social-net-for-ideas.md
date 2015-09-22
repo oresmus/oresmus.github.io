@@ -535,6 +535,6 @@ rather than one containing every contributor's individual opinions and reasoning
 I am grateful to my friends who have read and commented on earlier drafts
 (in some cases an embarrassingly long time ago),
 whom I thank for their reading and feedback,
-especially Eric Drexler, Peter McCluskey, and Erik Messick, who provided the most extensive comments,
+especially Eric Drexler, Peter McCluskey, and Eric Messick, who provided the most extensive comments,
 and also John Baez, John Michelsen, Mark Sims, Will Ware, and probably some other people to whom I apologize for forgetting.
 
