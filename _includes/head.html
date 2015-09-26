@@ -14,6 +14,10 @@
   <meta content='en_US' property='og:locale'/>
   <meta content='{{ site.title }}' property='og:site_name'/>
 
+  {% if page.categories %}
+    <meta content='article' property='og:type'/>
+  {% endif %}
+  
   {% if page.cover %}
     <meta content="{{ page.cover }}" property='og:image'/>
   {% endif %}
