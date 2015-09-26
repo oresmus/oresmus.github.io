@@ -5,14 +5,16 @@ date:   2015-09-21 17:38:38
 author: "Bruce Smith"
 ## meta: "two week read"
 tags: OPSN "semantic network" "idea graph" "global brain"
+cover:  "/assets/network 2c 800x600.jpg"
+cover-caption: "semantic networks with partial overlap (artist's representation)"
 ---
 
 
 This post proposes a new kind of software tool and social network protocol
-for people who want to engage others in **constructive discussions
-about complex problems** (of all scales),
-or more generally to **collaborate on complex projects**
-in an open-ended way.
+ for people who want to engage others in **constructive discussions
+ about complex problems** (of all scales),
+ or more generally to **collaborate on complex projects**
+ in an open-ended way.
 
 The goal is to increase the effectiveness of group discussions of all sizes,
 by helping participants keep things organized for themselves and each other,
@@ -537,4 +539,5 @@ I am grateful to my friends who have read and commented on earlier drafts
 whom I thank for their reading and feedback,
 especially Eric Drexler, Peter McCluskey, and Eric Messick, who provided the most extensive comments,
 and also John Baez, John Michelsen, Mark Sims, Will Ware, and probably some other people to whom I apologize for forgetting.
+[Update 9/26/15: I also thank Zhenya Podlipentseva for the new cover image.]
 
