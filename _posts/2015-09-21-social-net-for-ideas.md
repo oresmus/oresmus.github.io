@@ -5,7 +5,7 @@ date:   2015-09-21 17:38:38
 author: "Bruce Smith"
 ## meta: "two week read"
 tags: OPSN "semantic network" "idea graph" "global brain"
-cover:  "/assets/network 2c 800x600.jpg"
+cover:  "/assets/network-2c-800x600.jpg"
 cover-caption: "semantic networks with partial overlap (artist's representation)"
 ---
 
