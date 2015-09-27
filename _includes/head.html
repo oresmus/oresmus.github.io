@@ -3,23 +3,27 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
-  <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
+  {% capture p_title %}{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}{% endcapture %}
+  {% capture p_desc %}{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 165 }}{% else %}{{ site.description }}{% endif %}{% endcapture %}
+  {% capture p_url %}{{ page.url | replace:'/index.html','/' | prepend: site.baseurl | prepend: site.url }}{% endcapture %}
+
+  <title>{{ p_title }}</title>
+
+  <meta name="description" content="{{ p_desc }}">
 
   <link href='//fonts.googleapis.com/css?family=Open+Sans:300,400,600,700' rel='stylesheet' type='text/css' />
   <link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl }}">
-  <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+  <link rel="canonical" href="{{ p_url }}">
   <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}" />
 
-  <meta content='en_US' property='og:locale'/>
-  <meta content='{{ site.title }}' property='og:site_name'/>
-
-  {% if page.categories %}
-    <meta content='article' property='og:type'/>
-  {% endif %}
-  
+  <meta property="og:site_name" content="{{ site.title }}"/>
+  <meta property="og:title" content="{{ p_title }}"/>
+  <meta property="og:type" content="blog"/>
+  <meta property="og:url" content="{{ p_url }}"/>
   {% if page.cover %}
-    <meta content="{{ page.cover }}" property='og:image'/>
+    <meta property='og:image' content="{{ page.cover | prepend: site.url }}"/>
   {% endif %}
+  <meta property="og:description" content="{{ p_desc }}"/>
+  <meta property="og:locale" content="en_US"/>
 
 </head>
