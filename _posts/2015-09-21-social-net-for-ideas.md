@@ -541,3 +541,9 @@ especially Eric Drexler, Peter McCluskey, and Eric Messick, who provided the mos
 and also John Baez, John Michelsen, Mark Sims, Will Ware, and probably some other people to whom I apologize for forgetting.
 [Update 9/26/15: I also thank Zhenya Podlipentseva for the new cover image.]
 
+#### commenting
+
+The best place to comment is on the [corresponding Google+ post](https://plus.google.com/+BruceSmith1/posts/VQvWraXr9D4).
+That is also the main place I'll announce any new developments.
+
+(Not everyone can see the Muut comments below, for unknown reasons.)
