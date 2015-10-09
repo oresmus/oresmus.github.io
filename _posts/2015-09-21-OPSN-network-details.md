@@ -1,6 +1,7 @@
 ---
 layout: post
 title:  "OPSN network details"
+listed: false
 date:   2015-09-21 17:34:44
 author: "Bruce Smith"
 tags: OPSN "semantic network" "idea graph" "global brain"
@@ -193,3 +194,6 @@ In fact, in some jurisdictions this is essentially required
 (e.g. every US host must provide a way to receive a DMCA request, or risk excessive legal liability).
 (Technically, a removal request might just be a special tag.)
 
+[update 10/9/2015: I'm nearing completion of a followup post
+which goes into details of possible data formats and network protocols,
+especially concerning how they support decentralized extension of general data formats and relation types.]
