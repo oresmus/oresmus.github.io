@@ -18,7 +18,7 @@ but for now I am not trying very hard to make this post understandable or intere
 except to someone already familiar with that problem and with certain related topics.
 
 (This is a draft, and could probably use some better organization and condensing,
-plus there are one or more xxx's marking places which need fixing.)
+plus there are one or more xxx's marking places which need fixing. Update 10/27: fixed typos.)
 
 
 ### summary of solution (for people who already know the problem)
@@ -250,7 +250,7 @@ so logically it reduces to the same problem.)
 
 So at a high level, the "Tiling Agents problem" is just: make sure that a machine following a safety rule
 is allowed (by that rule) to make any agent, and delegate any powers to it, which might help achieve its purpose,
-in any situation and manner for which we (hypothetical watching humans)
+in any situation and manner which we (hypothetical watching humans)
 can prove would be safe (or "feel like we ought to be able to prove safe",
 since part of the problem is just making sure we actually *can* prove that,
 in situations where we "obviously should be able to").
@@ -466,7 +466,7 @@ namely that **the agent has to be a valid implementation of the original machine
 
 Note that the "original machine's abstract specification" is nothing else than the pair of rules we just stated.
 (Which means it's a specification that contains a description of itself, but that's not a problem -- the standard
-trick for making a program that prints its own source code, or a Godel sentence, works for this too.)
+trick for making a program that prints its own source code, or a Gödel sentence, works for this too.)
 
 Everything else about the original machine
 (physical structure, nature of representation/implementation of internal states and operations,
