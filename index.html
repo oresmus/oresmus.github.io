@@ -8,6 +8,7 @@ layout: default
 
   <ul class="post-list">
     {% for post in site.posts %}
+     {% if post.listed %}
       <li>
         <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
 
@@ -21,6 +22,7 @@ layout: default
           </a>
         </p>
       </li>
+     {% endif %}
     {% endfor %}
   </ul>
 
