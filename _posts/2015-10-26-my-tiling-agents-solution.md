@@ -8,17 +8,20 @@ author: "Bruce Smith"
 tags: AI logic
 ---
 
-This is a brief description of my solution to the "Tiling Agents" problem
+This is a brief description of my solution to the "Tiling Agents" problem [YH2013]
 (about using formal logic for safety rules to govern general-purpose machine intelligence).
 
 (It elaborates some emails I sent to a few potentially-interested people around February 2014.)
 
-At some later date I might extend the background description (and add desirable references),
-but for now I am not trying very hard to make this post understandable or interesting
-except to someone already familiar with that problem and with certain related topics.
+This is a draft, and could use some better organization, condensing, and perhaps more background information.
+For now, I am not trying very hard to make this post understandable or interesting
+except to someone already familiar with the Tiling Agents problem and with certain related topics.
+It also has one or more xxx's marking places which need fixing.
 
-(This is a draft, and could probably use some better organization and condensing,
-plus there are one or more xxx's marking places which need fixing. Update 10/27: fixed typos.)
+[Update 1, 10/27: fixed typos.
+Update 2: added reference [YH2013],
+and discussion (at end) of how this solution differs from related "failed solutions" discussed there
+(also other minor changes).]
 
 
 ### summary of solution (for people who already know the problem)
@@ -69,6 +72,9 @@ to handle agents which are "improved in any reasonable way".
 * it also cleanly solves the related issue of
 "noticing your own physical manifestation as if from outside,
 and not feeling you need to stop it (due to it unsafely using or interfering with your own powers)".
+
+This solution is related to one "failed solution" and one "missing solution"
+discussed in Section 5 of [YH2013]. At the end, I discuss how it differs from those.
 
 
 ## background and problem
@@ -497,6 +503,36 @@ As I said there, I consider it obvious that this can be done, and I would not be
 also considered obvious by other people. One reason I don't know whether it's considered obvious
 is that it's a simple special case of a more general "theory of programming" I have which doesn't seem to be obvious or well-known.
 I hope to write more about those things in a future post.)
+
+
+### comparison to related "failed/missing solutions"
+
+[YH2013] discusses some solution attempts which are similar to this one in some ways
+(see its section 5, especially footnote 40 and the discussion which references it).
+The crucial difference seems to be that they discount
+the possibility of a "theory of programming" of the kind I discuss above.
+They suggest that any attempt to formalize "system S acts like abstract program G"
+will necessarily either be too tight (applying only to physically identical copies of S)
+or too loose (applying to systems similar in some parts to S,
+but arbitrarily different in others, resulting in arbitrary behavior).
+Therefore they conclude that a useful action criterion can only consider the results of S's behavior,
+not S's internal structure.
+
+The key element in making a "theory of programming" of the needed kind
+is for it to analyze S's overall internal (but abstractly understood and described) behavior
+(which is constrained by its structure, but could nonetheless be produced by many different structures).
+This does look at S's internal physical structure, not just at its externally visible behavior
+(let alone at just the results of that behavior);
+but it only requires the structure to have a desired abstract form
+(in the same way a "designer of S, with the goal of designing an implementation of G" ought to do),
+not any particular physical nature.
+
+
+#### references
+
+[YH2013] "Tiling Agents for Self-Modifying AI, and the Löbian Obstacle (Early Draft)", Yudkowsky & Herreshoff, 2013,
+https://intelligence.org/files/TilingAgentsDraft.pdf
+
 
 #### comments
 
