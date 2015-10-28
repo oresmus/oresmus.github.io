@@ -21,7 +21,8 @@ It also has one or more xxx's marking places which need fixing.
 [Update 1, 10/27: fixed typos.
 Update 2: added reference [YH2013],
 and discussion (at end) of how this solution differs from related "failed solutions" discussed there
-(also other minor changes).]
+(also other minor changes).
+Update 3, 10/28: extended generality discussion.]
 
 
 ### summary of solution (for people who already know the problem)
@@ -503,6 +504,40 @@ As I said there, I consider it obvious that this can be done, and I would not be
 also considered obvious by other people. One reason I don't know whether it's considered obvious
 is that it's a simple special case of a more general "theory of programming" I have which doesn't seem to be obvious or well-known.
 I hope to write more about those things in a future post.)
+
+
+[update 3, 10/28: It's worth pointing out that
+although my formalization separates "safety" and "efficacy"
+in a way that seems different from [YH2013],
+the difference is mainly terminology.
+As far as how those terms are used in the proofs here,
+all that matters
+is that "safety" is some goal that can be completely formalized,
+and which can be attained by some strategy which can be formally proven to work,
+whereas "efficacy" can be anything else that might affect the outcome,
+like a lower-priority goal addressed by informal or unproven means.
+So anything that *can* be fully addressed formally
+can be included in the "safety" part of my model.
+(And as I've shown, using agents needn't affect
+what proof system can be used for addressing it.)
+
+Also [including observations from a discussion
+with Tsvi Benson-Tilsen, Andrew Critch, and other members of their seminar on
+[Provability, Decision Theory and Artificial Intelligence](http://acritch.com/pdtai/)],
+the "abstract specification" can really be any predicate about physical structure of the "composite machine"
+(all individual machines and some parts of their surroundings)
+which gives the desired effect in the proofs here.
+At the most general level, we're just dividing the world-history
+(in whatever way is convenient, since it's not a physical distinction)
+into "controlled stuff" we make a "design-oriented" assertion about (in as abstract or general a way as we'd like),
+and "other stuff" we make a "goal-oriented" assertion about,
+in a way that lets us prove
+(by means of the "design-oriented" assertion, which should provably
+correspond to some high-level designer-like understanding of how the "controlled stuff" behaves)
+that the controlled stuff only takes actions which maintain the truth of both assertions.
+(To make explicit how time enters into that, both assertions have a time parameter
+and apply to the complete world history from the start time to the given time,
+with the given time being extended forward by induction.)]
 
 
 ### comparison to related "failed/missing solutions"
