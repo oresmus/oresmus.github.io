@@ -22,7 +22,7 @@ It also has one or more xxx's marking places which need fixing.
 Update 2: added reference [YH2013],
 and discussion (at end) of how this solution differs from related "failed solutions" discussed there
 (also other minor changes).
-Update 3, 10/28: extended generality discussion.]
+Updates 3 & 4, 10/28: extended generality discussion.]
 
 
 ### summary of solution (for people who already know the problem)
@@ -506,7 +506,9 @@ is that it's a simple special case of a more general "theory of programming" I h
 I hope to write more about those things in a future post.)
 
 
-[update 3, 10/28: It's worth pointing out that
+[updates 3 & 4, 10/28:
+
+It's worth pointing out that
 although my formalization separates "safety" and "efficacy"
 in a way that seems different from [YH2013],
 the difference is mainly terminology.
@@ -526,19 +528,29 @@ with Tsvi Benson-Tilsen, Andrew Critch, and other members of their seminar on
 [Provability, Decision Theory and Artificial Intelligence](http://acritch.com/pdtai/)
 (mentioned to credit them, not to imply their endorsement)],
 the "abstract specification" can really be any predicate about physical structure of the "composite machine"
-(all individual machines and some parts of their surroundings)
+(i.e. about the complete state-history of all individual machines and some parts of their surroundings)
 which gives the desired effect in the proofs here.
-At the most general level, we're just dividing the world-history
-(in whatever way is convenient, since it's not a physical distinction)
-into "controlled stuff" we make a "design-oriented" assertion about (in as abstract or general a way as we'd like),
-and "other stuff" we make a "goal-oriented" assertion about,
+At the most general level, we're just dividing the world-history into "two kinds of stuff"
+(in whatever way is convenient, since it's not a physical distinction --
+the division could even have a fuzzy boundary, though for clarity of this explanation we assume it doesn't):
+"controlled stuff" which we make a "design-oriented" assertion about
+(in as abstract or general a way as we'd like -- for example, it's ok for "X has design Y"
+to include statements like "X's low-level design has structure Q for which it's provable that R(Q)"),
+and "other stuff" which we make a "goal-oriented" assertion about,
 in a way that lets us prove
 (by means of the "design-oriented" assertion, which should provably
-correspond to some high-level designer-like understanding of how the "controlled stuff" behaves)
+correspond to some high-level designer-like understanding of how the "controlled stuff" behaves,
+and which is about complete history so it can also assert correlations between
+states at different times)
 that the controlled stuff only takes actions which maintain the truth of both assertions.
 (To make explicit how time enters into that, both assertions have a time parameter
 and apply to the complete world history from the start time to the given time,
-with the given time being extended forward by induction.)]
+with the given time being extended forward by induction. If the goal is specifically about a future time
+(what we'd normally think of as "not achieved until that time" even when the formal goal-condition is met),
+the goal-oriented assertion says "we're still on track towards achieving this goal according to our strategy",
+and we have to prove that the controlled stuff always keeps us on track.)
+
+(end of updates)]
 
 
 ### comparison to related "failed/missing solutions"
