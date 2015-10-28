@@ -523,7 +523,8 @@ what proof system can be used for addressing it.)
 
 Also [including observations from a discussion
 with Tsvi Benson-Tilsen, Andrew Critch, and other members of their seminar on
-[Provability, Decision Theory and Artificial Intelligence](http://acritch.com/pdtai/)],
+[Provability, Decision Theory and Artificial Intelligence](http://acritch.com/pdtai/)
+(mentioned to credit them, not to imply their endorsement)],
 the "abstract specification" can really be any predicate about physical structure of the "composite machine"
 (all individual machines and some parts of their surroundings)
 which gives the desired effect in the proofs here.
