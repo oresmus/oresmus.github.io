@@ -16,8 +16,22 @@ layout: default
   {% endif %}
 
   <header class="post-header">
-    <h1 class="post-title">{{ page.title }}</h1>
-    <p class="post-meta">{{ page.date | date: "%b %-d, %Y" }}{% if page.author %} • by {{ page.author }}{% endif %}{% if page.meta %} • {{ page.meta }}{% endif %}</p>
+    {% if page.smalltitle %}
+      <h2 class="post-title-h2">{{ page.title | markdownify }}</h2>
+    {% else %}
+      <h1 class="post-title">{{ page.title | markdownify }}</h1>
+    {% endif %}
+    <p class="post-meta">
+      {{ page.date | date: "%b %-d, %Y" }}
+      {% if page.author %} • by {{ page.author }}{% endif %}
+      {% if page.meta %} • {{ page.meta | markdownify | remove: '<p>' | remove: '</p>' }}{% endif %}
+      {% if page.part_of_EMSC %}
+        {% capture x_EMSC %} • part of
+            ["Extensible Meaning in a Shared Cloud"]({% post_url 2015-10-03-OPSN-data-formats %})
+        {% endcapture %}
+        {{x_EMSC | strip_newlines | markdownify | remove: '<p>' | remove: '</p>'}}
+      {% endif %}
+    </p>
   </header>
 
   <article class="post-content">

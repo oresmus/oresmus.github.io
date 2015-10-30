@@ -22,3 +22,4 @@ defaults:
     values:
       category: "blog"
       listed: true
+      smalltitle: false
