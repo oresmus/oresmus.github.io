@@ -5,6 +5,7 @@ title:  "solution to Tiling Agents problem"
 date:   2015-10-26 23:53:15
 listed: false
 author: "Bruce Smith"
+meta: update 4, 10/28 (see end for list of changes)
 tags: AI logic
 ---
 
@@ -17,12 +18,6 @@ This is a draft, and could use some better organization, condensing, and perhaps
 For now, I am not trying very hard to make this post understandable or interesting
 except to someone already familiar with the Tiling Agents problem and with certain related topics.
 It also has one or more xxx's marking places which need fixing.
-
-[Update 1, 10/27: fixed typos.
-Update 2: added reference [YH2013],
-and discussion (at end) of how this solution differs from related "failed solutions" discussed there
-(also other minor changes).
-Updates 3 & 4, 10/28: extended generality discussion.]
 
 
 ### summary of solution (for people who already know the problem)
@@ -588,4 +583,11 @@ The best place for comments, for now, is in email. (The Muut comments below only
 
 (Although this post will be present on my blog, it won't appear for now in the listing of posts on the home page,
 since a bunch of people are waiting for my "post #2" on a completely different topic and I don't want to confuse them.)
+
+[list of changes:
+Update 1, 10/27: fixed typos.
+Update 2: added reference [YH2013],
+and discussion (at end) of how this solution differs from related "failed solutions" discussed there
+(also other minor changes).
+Updates 3 & 4, 10/28: extended generality discussion.]
 
