@@ -5,24 +5,23 @@ title:  "solution to Tiling Agents problem"
 date:   2015-10-26 23:53:15
 listed: false
 author: "Bruce Smith"
-meta: update 4, 10/28 (see end for list of changes)
+meta: update 5, 10/29 (see end for list of changes)
 tags: AI logic
 ---
 
-This is a brief description of my solution to the "Tiling Agents" problem [YH2013]
-(about using formal logic for safety rules to govern general-purpose machine intelligence).
+This post describes my solution to the "Tiling Agents" problem [YH2013],
+which is about how to use
+formal logic for safety rules to govern general-purpose machine intelligence.
 
-(It elaborates some emails I sent to a few potentially-interested people around February 2014.)
-
-This is a draft, and could use some better organization, condensing, and perhaps more background information.
-For now, I am not trying very hard to make this post understandable or interesting
-except to someone already familiar with the Tiling Agents problem and with certain related topics.
-It also has one or more xxx's marking places which need fixing.
+This is a draft (with one or more xxx's marking places which need fixing).
+It is mainly intended for people already familiar
+with the Tiling Agents problem and certain related topics,
+though it reintroduces the problem so I can formalize it in a way which clarifies this solution.
 
 
 ### summary of solution (for people who already know the problem)
 
-The "Löbstacle" arises when you try to restrict a machine's actions, for safety,
+The "Löbstacle" arises when you try to restrict a machine's actions, for safety (or some other formalizable goal),
 to those it can prove have a safe result;
 but then, for flexibility, you want it to be able to create agents like itself
 and delegate some or all of its job to them.
@@ -45,7 +44,7 @@ or prove its effect is to delegate powers to a sufficiently-equivalent machine.
 (One complexity of this idea might be in formalizing "provably correct implementation of the same high-level program".
 I know how to do that, and consider it simple and perhaps obvious
 (given that the goals of the theory are purely logical rather than practical),
-but I haven't fully written it down,
+but I haven't fully written it down [but see "more about generality" for a brief description],
 and I don't know whether it will be considered either obvious or well-known by anyone else.
 In any case, for the proposed solution in this post to make sense,
 all we need is to assume a theory like that
@@ -70,7 +69,8 @@ to handle agents which are "improved in any reasonable way".
 and not feeling you need to stop it (due to it unsafely using or interfering with your own powers)".
 
 This solution is related to one "failed solution" and one "missing solution"
-discussed in Section 5 of [YH2013]. At the end, I discuss how it differs from those.
+discussed in Section 5 of [YH2013].
+In a "comparison" section near the end, I discuss how it differs from those.
 
 
 ## background and problem
@@ -321,7 +321,10 @@ any amount of "affected stuff" in the world, perhaps including parts of the same
 affected in ways other than their normal operation (e.g. of sensors)).
 (Only if there are no machines do we allow the world outside of machines to be dynamic.
 Effectively this means that anything dynamic must be modelled as "part of" some machine which is responsible for controlling it,
-except possibly when there are no machines left at the end.)
+except possibly when there are no machines left at the end.
+[This static/dynamic division is for simplicity of other aspects of this explanation,
+but is not essential in general --
+see "more about generality" below.])
 
 Second, whenever there is more than one machine,
 we'll consider them all part of one "composite machine"
@@ -426,7 +429,7 @@ That means we can't prove it's ok to make the agent (sorry -- I mean to die, but
 "non-machine stuff" which looks and acts just like the agent), 
 even though the agent is only going to take actions we could have proved were ok to do if we'd known what they were.
 
-### a clue
+### a partial solution
 
 But the humans watching (or imagining)
 all this *can* prove that making that agent *could safely be considered ok* (at least when the agent is identical
@@ -457,16 +460,17 @@ We have just proved that the resulting machine is safe, so this is indeed a corr
 (and as we saw earlier, it does go beyond what the "version 1" safety rule alone allowed).
 But that agent-making safety rule is a bit more limiting than we'd like.
 
-### the solution
+## the solution
 
-Fortunately, there is a way to generalize it without losing the validity of that safety proof:
+Fortunately, there is a way to generalize that partial solution
+without losing the validity of its safety proof:
 
 * allow an agent-making action if it passes a special safety rule,
 namely that **the agent has to be a valid implementation of the original machine's abstract specification.**
 
 * also allow a standard action, using the same (version 1) safety rule as before.
 
-Note that the "original machine's abstract specification" is nothing else than the pair of rules we just stated.
+Note that the "original machine's abstract specification" is nothing other than the pair of rules we just stated.
 (Which means it's a specification that contains a description of itself, but that's not a problem -- the standard
 trick for making a program that prints its own source code, or a Gödel sentence, works for this too.)
 
@@ -475,6 +479,8 @@ Everything else about the original machine
 purpose, strategy, intelligence, etc)
 is **not restricted by the abstract specification**
 and is therefore free to vary in the agent relative to the parent machine and/or to the original machine.
+(Of course, the parent will only want to vary the child agent in ways it thinks help its purpose --
+the point is that it's free to do so without violating the safety rule.)
 
 But the proof goes through exactly as before, except what we prove by induction is not that each machine in series
 is an identical copy of the original, but that it's a valid implementation of the original machine's abstract specification.
@@ -495,13 +501,13 @@ each agent-making action turns it into a new machine, and just say there's one l
 performing repeated actions of self-modification.)
 
 (But to spell out the details of that "yes" would require filling out the "theory of programming" mentioned in the summary.
-As I said there, I consider it obvious that this can be done, and I would not be surprised if that's well known and/or
-also considered obvious by other people. One reason I don't know whether it's considered obvious
-is that it's a simple special case of a more general "theory of programming" I have which doesn't seem to be obvious or well-known.
+As I said there, I consider it obvious that this can be done,
+and I would not be surprised if that's well known and/or
+considered obvious by other people.
+One reason I don't know whether it's considered obvious
+is that it's a simple special case of a more general "theory of programming" I have,
+which doesn't seem to be obvious or well-known.
 I hope to write more about those things in a future post.)
-
-
-[updates 3 & 4, 10/28:
 
 It's worth pointing out that
 although my formalization separates "safety" and "efficacy"
@@ -517,35 +523,6 @@ So anything that *can* be fully addressed formally
 can be included in the "safety" part of my model.
 (And as I've shown, using agents needn't affect
 what proof system can be used for addressing it.)
-
-Also [including observations from a discussion
-with Tsvi Benson-Tilsen, Andrew Critch, and other members of their seminar on
-[Provability, Decision Theory and Artificial Intelligence](http://acritch.com/pdtai/)
-(mentioned to credit them, not to imply their endorsement)],
-the "abstract specification" can really be any predicate about physical structure of the "composite machine"
-(i.e. about the complete state-history of all individual machines and some parts of their surroundings)
-which gives the desired effect in the proofs here.
-At the most general level, we're just dividing the world-history into "two kinds of stuff"
-(in whatever way is convenient, since it's not a physical distinction --
-the division could even have a fuzzy boundary, though for clarity of this explanation we assume it doesn't):
-"controlled stuff" which we make a "design-oriented" assertion about
-(in as abstract or general a way as we'd like -- for example, it's ok for "X has design Y"
-to include statements like "X's low-level design has structure Q for which it's provable that R(Q)"),
-and "other stuff" which we make a "goal-oriented" assertion about,
-in a way that lets us prove
-(by means of the "design-oriented" assertion, which should provably
-correspond to some high-level designer-like understanding of how the "controlled stuff" behaves,
-and which is about complete history so it can also assert correlations between
-states at different times)
-that the controlled stuff only takes actions which maintain the truth of both assertions.
-(To make explicit how time enters into that, both assertions have a time parameter
-and apply to the complete world history from the start time to the given time,
-with the given time being extended forward by induction. If the goal is specifically about a future time
-(what we'd normally think of as "not achieved until that time" even when the formal goal-condition is met),
-the goal-oriented assertion says "we're still on track towards achieving this goal according to our strategy",
-and we have to prove that the controlled stuff always keeps us on track.)
-
-(end of updates)]
 
 
 ### comparison to related "failed/missing solutions"
@@ -571,10 +548,90 @@ but it only requires the structure to have a desired abstract form
 not any particular physical nature.
 
 
+### more about generality
+
+The solution described here used a certain form of "abstract specification" of a valid "composite machine"
+(a union of all individual machines and some of their surroundings),
+but it can be made more general
+when we examine how that specification is used in the proof.
+
+In fact, we can use any predicate of the complete world history
+(or more precisely, of all history from the start time to a time parameter,
+which will be extended into the future by induction)
+which is based on a division of "spacetime"
+into "designed stuff" (the machines and some parts of their surroundings)
+and "other stuff" (everything else),
+and is the conjunction of a different kind of assertion about each part.
+(This "self/other" division is non-physical -- we can divide things in whatever way makes the proof easiest.
+We could even use a "fuzzy boundary" between these parts, though for clarity I won't discuss that here.
+I should emphasize that this division is generally "of spacetime" rather than of space or time separately --
+this is necessary since any given point in space might be sometimes part of a machine and sometimes not.)
+
+About the "designed stuff", we need a "design-oriented" predicate
+which asserts that its state stays within "design rules"
+which correspond to what we view as "correct operation of the machines according to their (abstract) design".
+(One reason it's about the complete history is so it can assert correlations between
+states at different times; for example, we need this to describe correct operation of anything with "memory".)
+
+The ability to make a predicate like that, corresponding to any design for which there's
+a good reason to be sure it will "work properly", is what the "theory of programming" is about.
+In general, a design has several levels of abstraction of structure and internal behavior rules
+(which can both be viewed as aspects of "its structure in spacetime", i.e. of its history when viewed at that level),
+with each level implementing the next-higher level;
+the predicate asserts that a series of specific history-structures (one per level) exists,
+in which each pair of successive levels (L, H) has the relation "L implements H".
+
+About the "other stuff", we use a "goal-oriented" predicate.
+For our safety rules, this would assert "everything is still ok";
+for making progress towards a desired future state (if we're formalizing that),
+it would assert we're "still on track" to achieving that,
+according to some strategy (implemented by the machines)
+which is another part of the overall design.
+
+We construct these predicates so we can prove by induction
+that at every time,
+the history up to that time still satisfies them.
+The proof just formalizes our understanding,
+as designers of the machines and their strategy,
+about how the machines continue to operate correctly,
+and (due to this)
+the safety condition continues to be met,
+and (if applicable) the strategy the machines implement
+keeps the world on track towards the final goal.
+Specifically, it proves that designed stuff only takes actions, or makes internal state transitions,
+which maintain the truth of all these assertions.
+
+The design-oriented predicate can be quite general or abstract when this is useful.
+For example, it's ok for "X has design Y"
+to include statements like "X's low-level design has structure Q for which it's provable that R(Q)".
+
+The specific solution to Tiling Agents given earlier corresponds to a predicate which divides history
+into sequential stages (the lifetimes of each agent), in which each stage constructs the next
+according to a design which it can prove implements the "abstract specification" of one agent.
+To recap the discussion from when that solution was introduced,
+those agents can't assume their (common) proof system is sound, due to the "Löbstacle",
+but "we" (analyzing the system from outside) can and do, since all we try to prove is the implication
+"if that system is sound, then this sequence of agents works as intended" -- which is exactly what we'd want to prove
+even if there was only one machine in the sequence, since the correctness of its non-agent-making actions also depends
+on the proof system being sound. Once we do assume soundness,
+each agent's correctness (as an implementation of the "abstract specification")
+implies that of the next,
+so we get them all correct by induction.
+
+
 #### references
 
 [YH2013] "Tiling Agents for Self-Modifying AI, and the Löbian Obstacle (Early Draft)", Yudkowsky & Herreshoff, 2013,
 https://intelligence.org/files/TilingAgentsDraft.pdf
+
+
+#### thanks
+
+I thank Tsvi Benson-Tilsen, Andrew Critch, and other members of their 10/27/15 seminar on
+[Provability, Decision Theory and Artificial Intelligence](http://acritch.com/pdtai/)
+for interesting discussions which led to some new observations discussed in the section "more about generality"
+(which I mention to credit them, not to imply their endorsement).
+I thank John Baez for suggesting some clarifications.
 
 
 #### comments
@@ -582,12 +639,22 @@ https://intelligence.org/files/TilingAgentsDraft.pdf
 The best place for comments, for now, is in email. (The Muut comments below only work for some people.)
 
 (Although this post will be present on my blog, it won't appear for now in the listing of posts on the home page,
-since a bunch of people are waiting for my "post #2" on a completely different topic and I don't want to confuse them.)
+since a bunch of people are waiting for my "post #2" on a completely different topic, and I don't want to confuse them.)
 
+
+#### history
+
+I developed this solution around February 2014 (though the "theory of programming" it refers to is much older).
+This post clarifies and elaborates some private emails I sent then,
+and adds new discussion.
+
+<p class="post-meta">
 [list of changes:
 Update 1, 10/27: fixed typos.
 Update 2: added reference [YH2013],
 and discussion (at end) of how this solution differs from related "failed solutions" discussed there
 (also other minor changes).
-Updates 3 & 4, 10/28: extended generality discussion.]
+Updates 3 & 4, 10/28: extended generality discussion.
+Update 5, 10/29: general rewrites for clarity.]
+</p>
 
