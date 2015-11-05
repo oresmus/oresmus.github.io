@@ -5,13 +5,15 @@ title:  "solution to Tiling Agents problem"
 date:   2015-10-26 23:53:15
 listed: false
 author: "Bruce Smith"
-meta: update 5, 10/29 (see end for list of changes)
+meta: update 6, 11/4 (see end for list of changes)
 tags: AI logic
 ---
 
 This post describes my solution to the "Tiling Agents" problem [YH2013],
 which is about how to use
 formal logic for safety rules to govern general-purpose machine intelligence.
+To my knowledge, this is the first solution in which the child and parent agents
+can use identical proof systems to evaluate their actions.
 
 This is a draft (with one or more xxx's marking places which need fixing).
 It is mainly intended for people already familiar
@@ -21,7 +23,7 @@ though it reintroduces the problem so I can formalize it in a way which clarifie
 
 ### summary of solution (for people who already know the problem)
 
-The "Löbstacle" arises when you try to restrict a machine's actions, for safety (or some other formalizable goal),
+The "Löbstacle" arises when you try to restrict a machine's actions, for safety (or for some other formalizable goal),
 to those it can prove have a safe result;
 but then, for flexibility, you want it to be able to create agents like itself
 and delegate some or all of its job to them.
@@ -52,17 +54,19 @@ all we need is to assume a theory like that
 not for it to be described or understood here.)
 
 It's easy to show that this new kind of machine is safe,
-provided we assume the original kind (which has only the first way of proving an action is permitted)
-is safe -- which we do assume, but which is not itself provable,
-since this amounts to assuming
-that any action that can be proven safe (and therefore, any action the machine does) is actually safe.
+provided the original kind (which has only the first way of proving an action is permitted)
+is safe.
+In either case we need to assume the proof system they use is sound
+(which is, of course, not provable within that same system) --
+even for the original kind of machine, that's what justifies our conclusion that its actions are safe,
+given that it proved they were safe before doing them.
 
 I also claim, about this solution:
 
 * it's as general and flexible as it needs to be,
 to handle agents which are "improved in any reasonable way".
 (That is an informal claim whose main argument consists of the challenge
-"think of something legitimate which this scheme couldn't handle".)
+"think of something legitimate which this scheme couldn't handle". But I do elaborate this below.)
 
 * it also cleanly solves the related issue of
 "noticing your own physical manifestation as if from outside,
@@ -442,10 +446,11 @@ followed by a standard action, is ok. The proof is almost too trivial to write d
 since it's just a matter of terminology; whatever we're trying to say about the world-history is unaffected by whether
 we call some part of it a machine or not);
 
-* by induction, we prove that each machine in turn is a valid copy of the original,
-since the prior one was, and made it, and therefore proved making it was ok (by the rule above),
-i.e. that the just-made machine was indeed a valid copy,
-and that proof was sound so its conclusion was correct;
+* by induction, we prove that each machine M in turn is a valid copy of the original:
+since the prior machine was valid (by induction), and made M, the prior machine proved making M was ok
+(by the agent-making rule above) --
+in other words, it proved that M is indeed a valid copy of the original;
+since we're assuming the proof system being used is sound, we conclude that M *is* a valid copy;
 
 * the last machine in that series leaves the world in a safe state, by the same proof as before.
 
@@ -655,6 +660,7 @@ Update 2: added reference [YH2013],
 and discussion (at end) of how this solution differs from related "failed solutions" discussed there
 (also other minor changes).
 Updates 3 & 4, 10/28: extended generality discussion.
-Update 5, 10/29: general rewrites for clarity.]
+Update 5, 10/29: general rewrites for clarity.
+Update 6, 11/4: clarify that child proof system is same as parent; other minor rewrites for clarity.]
 </p>
 
