@@ -57,18 +57,28 @@ It's easy to show that this new kind of machine is safe,
 provided the original kind (which has only the first way of proving an action is permitted)
 is safe.
 In either case we need to assume the proof system they use is sound
-(which is, of course, not provable within that same system) --
+(which is, of course, not provable within that same system, and thus not assumable by the agents) --
 even for the original kind of machine, that's what justifies our conclusion that its actions are safe,
 given that it proved they were safe before doing them.
+With the new kind of machine, that assumption also justifies an inductive step
+in which we conclude that each next agent that gets made is a "valid" one.
+(The agents can't know this, but they can prove it would follow from that assumption of soundness --
+which is our own situation as well, if we admit we don't actually *know* the proof system is sound.
+Indeed, at least in terms of logic,
+we could think of ourselves as "the zeroth machine, which made the first machine",
+and then we are in the same logical situation as all the machines are.)
 
 I also claim, about this solution:
 
-* it's as general and flexible as it needs to be,
+* It's as general and flexible as it needs to be,
 to handle agents which are "improved in any reasonable way".
 (That is an informal claim whose main argument consists of the challenge
-"think of something legitimate which this scheme couldn't handle". But I do elaborate this below.)
+"think of something legitimate which this scheme couldn't handle".
+But I do elaborate on this below,
+and discuss how the "self/other distinction" between an agent and its environment, being non-physical,
+can be specified in whatever way makes the proofs convenient.)
 
-* it also cleanly solves the related issue of
+* It also cleanly solves the related issue of
 "noticing your own physical manifestation as if from outside,
 and not feeling you need to stop it (due to it unsafely using or interfering with your own powers)".
 
@@ -661,6 +671,6 @@ and discussion (at end) of how this solution differs from related "failed soluti
 (also other minor changes).
 Updates 3 & 4, 10/28: extended generality discussion.
 Update 5, 10/29: general rewrites for clarity.
-Update 6, 11/4: clarify that child proof system is same as parent; other minor rewrites for clarity.]
+Update 6, 11/4: clarify that child proof system is same as parent; other rewrites/additions for clarity.]
 </p>
 
