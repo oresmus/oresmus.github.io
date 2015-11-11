@@ -87,7 +87,7 @@ implies something like "person P believes statement S"
 (see the advanced topic posts about
 ["expr meaning"]({% post_url 2015-11-10-OPSN-expr-meaning %})
 and
-["signing statements"]({% post_url 2015-11-31-OPSN-signing-statements %})).
+["signing statements"]({% post_url 2015-11-31-OPSN-signing-statements %}) [the 2nd one is UNFINISHED]).
 
 (There is also a lower-level sense in which every item *can* be treated as a formal statement (about its own data and uid),
 explained in ["expr meaning"]({% post_url 2015-11-10-OPSN-expr-meaning %}).)
@@ -261,7 +261,7 @@ so we have to specify those ourselves.
 (For interpreting "external data" (like the contents of an emailed or http-served file) as one or more OPSN items,
 we'd like a more general format than the one for items "already in OPSN";
 see the advanced topic
-["universal document format"]({% post_url 2015-11-31-OPSN-universal-document %}).)
+["universal document format"]({% post_url 2015-11-31-OPSN-universal-document %}). [UNFINISHED])
 
 Any expression format defines a recursive datatype
 in which expressions are built up from smaller expressions and "atoms" (symbols, numbers, references, etc).
@@ -755,7 +755,7 @@ but the chaos can be dealt with, and we can coexist with conventional schemes,
 perhaps even adopting and disambiguating *their* symbols
 to take advantage of their benefits and existing vocabularies
 
-* (see also [**data storage and communication**]({% post_url 2015-11-31-OPSN-storage-comm %}), listed below)
+* (see also [**data storage and communication**]({% post_url 2015-11-31-OPSN-storage-comm %}), listed below [UNFINISHED])
 
 
 Mutable items:
