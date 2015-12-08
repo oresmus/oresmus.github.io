@@ -4,12 +4,16 @@ layout: default
 <section id="post" class="post">
 
   {% if page.cover %}
-    <img alt="(cover image)" height="400" src="{{ page.cover }}" />
+    <a href="{{ page.cover }}">
+      <img alt="(cover image)" height="400" src="{{ page.cover }}" />
+    </a>
   {% endif %}
   {% if page.cover-caption %}
-    <p class="post-meta">
-      {{ page.cover-caption }} 
-    </p>
+    <a href="{{ page.cover }}">
+      <p class="post-meta">
+        {{ page.cover-caption }} 
+      </p>
+    </a>
   {% endif %}
   {% if page.cover or page.cover-caption %}
     <div style="visibility:hidden">X</div>
