@@ -1,14 +1,13 @@
 ---
 layout: post
 title:  "Extensible Meaning in a Shared Cloud"
-## title:  "extensible meaning in a shared cloud"
 ## title:  "protocols for extensible meaning"
 ## title:  "OPSN data formats and protocols"
 date:   2015-11-10 17:33:55
 author: "Bruce Smith"
 tags: OPSN expr meaning data format protocol uitem udata uref universal
-cover:  "/assets/network-2c-800x600.jpg"
-cover-caption: "semantic networks with partial overlap (artist's representation)"
+cover:  "/assets/scloud2-1540x1155.png"
+cover-caption: "universal expressions in a shared cloud (screenshot of prototype; click to enlarge)"
 ---
 
 
@@ -830,13 +829,13 @@ Anyone who wants to list related projects on the
 or in the [collaborative design software](https://plus.google.com/u/0/communities/106968774922164714591) Google+ Community,
 is welcome to do so.
 
-[Cover image credit: Zhenya Podlipentseva.]
-
-[In a few days I plan to add a new cover image and post this to Google+.]
+[Cover image credit: the author, 12/7/2015.
+It's a screenshot of prototype rendering software displaying a random graph,
+though this image style is designed for showing the data structure, not for actual use.]
 
 
 #### commenting
 
-The best place to comment is on the associated Google+ post, once it exists.
-(To be notified when a specific UNFINISHED companion post is ready, you can say so there.)
+The best place to comment is on the associated Google+ post.
+(To be notified when a specific UNFINISHED companion post is ready, you can say so in a comment on that post.)
 
