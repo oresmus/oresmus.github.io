@@ -7,7 +7,12 @@ date:   2015-11-10 17:33:55
 author: "Bruce Smith"
 tags: OPSN expr meaning data format protocol uitem udata uref universal
 cover:  "/assets/scloud2-1540x1155.png"
-cover-caption: "universal expressions in a shared cloud (screenshot of prototype; click to enlarge)"
+cover-caption: |
+    A graph of location-independent expressions linked by cryptographic hashes,
+    forming a "shared cloud"
+    (screenshot of prototype rendering software; click to enlarge).
+    The image style is not meant for actual use,
+    but to illustrate the data structure.
 ---
 
 
@@ -829,13 +834,13 @@ Anyone who wants to list related projects on the
 or in the [collaborative design software](https://plus.google.com/u/0/communities/106968774922164714591) Google+ Community,
 is welcome to do so.
 
-[Cover image credit: the author, 12/7/2015.
-It's a screenshot of prototype rendering software displaying a random graph,
-though this image style is designed for showing the data structure, not for actual use.]
+[Update 12/7/2015: added cover image and caption.]
 
 
 #### commenting
 
 The best place to comment is on the associated Google+ post.
-(To be notified when a specific UNFINISHED companion post is ready, you can say so in a comment on that post.)
+(You can also comment there
+if you want to be notified
+when a specific "UNFINISHED" companion post is ready.)
 
