@@ -834,12 +834,14 @@ Anyone who wants to list related projects on the
 or in the [collaborative design software](https://plus.google.com/u/0/communities/106968774922164714591) Google+ Community,
 is welcome to do so.
 
-[Update 12/7/2015: added cover image and caption.]
+[Updates:
+12/7/2015: added cover image and caption.
+12/8/2015: [posted to Google+](https://plus.google.com/u/0/+BruceSmith1/posts/7JjE9D7QTpp).]
 
 
 #### commenting
 
-The best place to comment is on the associated Google+ post.
+The best place to comment is on the [associated Google+ post](https://plus.google.com/u/0/+BruceSmith1/posts/7JjE9D7QTpp).
 (You can also comment there
 if you want to be notified
 when a specific "UNFINISHED" companion post is ready.)
