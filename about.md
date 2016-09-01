@@ -24,10 +24,10 @@ the best place is either the wiki,
 or a post on your own blog or wiki,
 which you are welcome to link to from the wiki or forum.
 
+Blog author: Bruce Smith&nbsp;&nbsp;&nbsp;(here is my CV, as [pdf](/resume-bruce-smith.pdf) or [html](/resume-bruce-smith.html))
+
 <div>
         <ul class="social-media-list">
-
-          <li> <p> Blog author: Bruce Smith </p> </li>
 
           <!-- <li> <p> email: {{ site.email }} </p> </li> -->
           
