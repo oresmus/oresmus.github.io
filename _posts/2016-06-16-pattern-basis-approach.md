@@ -1,6 +1,8 @@
 ---
 layout: post
 title:  "The Pattern Basis Approach to Circuit Complexity"
+listed: false
+## made this unlisted on 200221 so as not to dilute my blog's OPSN focus
 date:   2016-06-16 17:55:55
 author: "Bruce Smith"
 ## tags: "math" "circuit complexity" "pattern basis" --- for unknown reasons, these tags cause a bug in processing the post
